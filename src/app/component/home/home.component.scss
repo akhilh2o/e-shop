@@ -1,0 +1,55 @@
+section {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    &.category {
+        width: 100%;
+        height: 500px;
+        background-color: #f7f7f7;
+        .row {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            .col-6 {
+                margin-right: 10px;
+                width: 50%;
+                position: relative;
+                .background-image {
+                    position: absolute;
+                    width: 100%;
+                    height: 500px;
+                    background-image: url("https://technext.github.io/ashion/img/categories/category-1.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    .text {
+                        top: 20%;
+                        position: absolute;
+                        left: 10%;
+                        width: 400px;
+                        h1 {
+                            font-size: 36px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .col-3 {
+                margin-left: 10px;
+                margin-right: 0;
+                width: 25%;
+                position: relative;
+                .background-image {
+                    position: absolute;
+                    width: 100%;
+                    height: 340px;
+                    background-image: url("https://technext.github.io/ashion/img/categories/category-2.jpg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}

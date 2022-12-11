@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+$header-bg-color: #fff;
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+$primary-color: #f8bbd0 !default;
+$accent-color: #6a1b9a !default;
+$primary-text-color: #10358b;
+$primary-text-hover-color: #faa830;
+
+@import url("assets/css/utility.scss");
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    .row {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+header {
+    padding: 10px 40px;
+    max-width: 100%;
+    background: $header-bg-color;
+    -webkit-box-shadow: 0px 5px 10px rgb(91 91 91 / 10%);
+    box-shadow: 0px 5px 10px rgb(91 91 91 / 10%);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo__container {
+            img {
+                width: 100px;
+                height: auto;
+            }
+        }
+        .menu__container {
+            .menu ul {
+                display: flex;
+                li {
+                    list-style: none;
+                    padding: 0px 10px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    display: block;
+                    position: relative;
+                    &.active a::after {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #ca1515;
+                        content: "";
+                        -webkit-transition: all, 0.5s;
+                        -o-transition: all, 0.5s;
+                        transition: all, 0.5s;
+                        -webkit-transform: scale(0);
+                        -ms-transform: scale(0);
+                        transform: scale(0);
+                    }
+                }
+            }
+        }
+        .icon__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .user__icon {
+                display: flex;
+                justify-content: space-between;
+                a {
+                    font-size: 14px;
+                    color: #666666;
+                    position: relative;
+                    margin-right: 8px;
+                    &.after::after {
+                        content: "/";
+                        margin-left: 10px;
+                        font-size: 13px;
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                li {
+                    list-style: none;
+                    padding: 0 10px;
+                    i {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    padding: 20px 60px;
+    .container {
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            .col-1{
+                width: 60%;
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    li {
+                        padding: 6px 0;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .col {
+                width: 100%;
+                margin: 0 20px;
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    li {
+                        padding: 6px 0;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .form-input {
+                    position: relative;
+                    input {
+                        padding: 20px;
+                        border-radius: 40px;
+                        position: absolute;
+                        width: 100%;
+                        border: 1px solid #ccc;
+                    }
+                    button {
+                        padding: 16px 40px;
+                        border-radius: 40px;
+                        position: absolute;
+                        right: -40px;
+                        margin-top: 2px;
+                        background-color: red;
+                        text-transform: uppercase;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 14px;
+                        border: 1px solid #ccc;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .bottom {
+            border-top: 1px solid #ccc;
+        }
+    }
+}
